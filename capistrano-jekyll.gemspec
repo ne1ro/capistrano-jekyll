@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Capistrano integration for Jekyll'
   spec.description   = 'Capistrano deploy tool integration for Jekyll static
-  page generator'
+  website generator'
   spec.homepage      = 'https://github.com/ne1ro/capistrano-jekyll'
   spec.license       = 'MIT'
 
