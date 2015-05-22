@@ -27,11 +27,6 @@ require 'capistrano/jekyll'
 ```  
 **jekyll:build** task will run after **deploy:published** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production jekyll:build`
 
-###Configurable options:  
-```ruby
-set :jekyll_config, '_config.yml' # Jekyll config path by default
-```  
-
 ## Contributing
 
 1. Fork it ( https://github.com/ne1ro/capistrano-jekyll/fork )
