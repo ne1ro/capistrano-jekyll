@@ -27,6 +27,11 @@ require 'capistrano/jekyll'
 ```  
 **jekyll:build** task will run after **deploy:published** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production jekyll:build`
 
+### List of tasks
+* `cap jekyll:build # Build your website`
+* `cap jekyll:doctor # Search site and print specific deprecation warnings`
+* `cap jekyll:new # Creates a new Jekyll site scaffold in PATH`
+
 ## Contributing
 
 1. Fork it ( https://github.com/ne1ro/capistrano-jekyll/fork )
