@@ -25,12 +25,11 @@ Require in *Capfile* to use the default task:
 ```ruby
 require 'capistrano/jekyll'
 ```  
-**jekyll:build** task will run after **deploy:published** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production jekyll:build`
+**jekyll:build** task will run after **deploy:symlink:release** as part of Capistrano's default deploy, or can be run in isolation with `bundle exec cap production jekyll:build`
 
 ### List of tasks
 * `cap jekyll:build # Build your website`
 * `cap jekyll:doctor # Search site and print specific deprecation warnings`
-* `cap jekyll:new # Creates a new Jekyll site scaffold in PATH`
 
 ## Contributing
 
