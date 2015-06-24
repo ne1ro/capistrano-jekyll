@@ -18,14 +18,5 @@ namespace :jekyll do
     end
   end
 
-  desc 'Creates a new Jekyll site scaffold in PATH'
-  task :new do
-    on roles(:web) do
-      within current_path do
-        execute :jekyll, 'new'
-      end
-    end
-  end
-
-  after 'deploy:published', :build
+  after 'deploy:symlink:release', :build
 end
