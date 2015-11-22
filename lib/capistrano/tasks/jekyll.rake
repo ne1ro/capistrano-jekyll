@@ -1,22 +1,22 @@
 desc 'Jekyll integration'
 namespace :jekyll do
-  desc 'Build your website'
+  desc 'Build the website using Jekyll'
   task :build do
     on roles(:web) do
-      within current_path do
+      within release_path do
         execute :jekyll, 'build'
       end
     end
   end
 
-  desc 'Search site and print specific deprecation warnings'
+  desc 'Print Jekyll deprecation warnings'
   task :doctor do
     on roles(:web) do
-      within current_path do
+      within release_path do
         execute :jekyll, 'doctor'
       end
     end
   end
 
-  after 'deploy:symlink:release', :build
+  after 'deploy:updated', :build
 end
