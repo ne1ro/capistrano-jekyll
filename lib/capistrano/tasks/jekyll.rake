@@ -18,5 +18,5 @@ namespace :jekyll do
     end
   end
 
-  after 'deploy:updated', :build
+  after 'deploy:updated', 'jekyll:build'
 end
