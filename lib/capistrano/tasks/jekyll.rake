@@ -4,7 +4,11 @@ namespace :jekyll do
   task :build do
     on roles(:web) do
       within release_path do
-        execute :jekyll, 'build'
+        if defined? Bundler
+          execute :bundle, :exec, :jekyll, 'build'
+        else
+          execute :jekyll, 'build'
+        end
       end
     end
   end
@@ -13,7 +17,11 @@ namespace :jekyll do
   task :doctor do
     on roles(:web) do
       within release_path do
-        execute :jekyll, 'doctor'
+        if defined? Bundler
+          execute :bundle, :exec, :jekyll, 'doctor'
+        else
+          execute :jekyll, 'doctor'
+        end     
       end
     end
   end
